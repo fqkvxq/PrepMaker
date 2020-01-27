@@ -25,7 +25,7 @@ function inputText() {
 }
 
 function deleteInputs() {
-    if (confirm("削除しますか？")) {
+    if (confirm("空白を削除してコピーしますか？")) {
         document.getElementById('headlineText').value = "";
         document.getElementById('firstPointText').value = "";
         document.getElementById('reasonText').value = "";
@@ -37,13 +37,15 @@ function deleteInputs() {
 }
 
 function deleteKuhaku() {
-    console.dir("作動");
-    var text = document.getElementById('generatedTextArea').value;
-    text = text.replace(/\s+/g, "");
-    document.getElementById('generatedTextArea').value = text;
-    console.log(text);
-    document.getElementById('generatedTextArea').select();
-    document.execCommand("copy");
+    if (confirm("削除しますか？")) {
+        console.dir("作動");
+        var text = document.getElementById('generatedTextArea').value;
+        text = text.replace(/\s+/g, "");
+        document.getElementById('generatedTextArea').value = text;
+        console.log(text);
+        document.getElementById('generatedTextArea').select();
+        document.execCommand("copy");
+    }
 }
 
 // 指定したタグ以外のタグをすべて削除
