@@ -17,7 +17,7 @@ function inputText() {
     firstPointText = document.getElementById('firstPointText').value + "\n\n";
     reasonText = document.getElementById('reasonText').value + "\n\n";
     exampleText = document.getElementById('exampleText').value + "\n\n";
-    secondPointText = document.getElementById('secondPointText').value + "\n\n";
+    secondPointText = document.getElementById('secondPointText').value;
     document.getElementById('generatedTextArea').value = firstPointText + reasonText + exampleText + secondPointText;
 }
 
