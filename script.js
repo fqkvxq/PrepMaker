@@ -14,10 +14,10 @@ var secondPointText = "";
 
 // フォームに文字入力をしたときの挙動
 function inputText() {
-    firstPointText = document.getElementById('firstPointText').value;
-    reasonText = document.getElementById('reasonText').value;
-    exampleText = document.getElementById('exampleText').value;
-    secondPointText = document.getElementById('secondPointText').value;
+    firstPointText = document.getElementById('firstPointText').value + "\n\n";
+    reasonText = document.getElementById('reasonText').value + "\n\n";
+    exampleText = document.getElementById('exampleText').value + "\n\n";
+    secondPointText = document.getElementById('secondPointText').value + "\n\n";
     document.getElementById('generatedTextArea').value = firstPointText + reasonText + exampleText + secondPointText;
 }
 

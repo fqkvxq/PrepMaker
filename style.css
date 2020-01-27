@@ -16,6 +16,10 @@ textarea {
     margin-bottom: 30px;
 }
 
+.matome {
+    margin-bottom: 500px;
+}
+
 .copyButton {
     background-color: #00f;
     border-radius: 5px;
@@ -23,4 +27,11 @@ textarea {
 
 .deleteButton {
     background-color: #f00;
+}
+
+.generatedText {
+    position: fixed;
+    background-color: #c0c0c0;
+    bottom: 0px;
+    margin: 0 auto;
 }
