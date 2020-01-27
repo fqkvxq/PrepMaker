@@ -1,4 +1,11 @@
 new ClipboardJS(".copyButton");
+window.addEventListener(
+    "beforeunload",
+    function(e) {
+        e.returnValue = "離脱しますか？";
+    },
+    false
+);
 var firstPointText = "";
 var reasonText = "";
 var exampleText = "";
