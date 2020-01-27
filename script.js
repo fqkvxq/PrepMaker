@@ -23,6 +23,7 @@ function inputText() {
 
 function deleteInputs() {
     if (confirm("削除しますか？")) {
+        document.getElementById('headlineText').value = "";
         document.getElementById('firstPointText').value = "";
         document.getElementById('reasonText').value = "";
         document.getElementById('exampleText').value = "";
