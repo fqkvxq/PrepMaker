@@ -19,6 +19,8 @@ function inputText() {
     exampleText = document.getElementById('exampleText').value + "\n\n";
     secondPointText = document.getElementById('secondPointText').value;
     document.getElementById('generatedTextArea').value = firstPointText + reasonText + exampleText + secondPointText;
+    var totalLength = firstPointText.length + reasonText.length + exampleText.length + secondPointText.length;
+    document.getElementById('letterLength').textContent = (totalLength - 6).toString();
 }
 
 function deleteInputs() {
