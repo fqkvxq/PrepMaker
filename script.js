@@ -10,6 +10,7 @@ var firstPointText = "";
 var reasonText = "";
 var exampleText = "";
 var secondPointText = "";
+document.getElementById('letterLength').textContent = "0";
 
 
 // フォームに文字入力をしたときの挙動
@@ -31,5 +32,41 @@ function deleteInputs() {
         document.getElementById('exampleText').value = "";
         document.getElementById('secondPointText').value = "";
         document.getElementById('generatedTextArea').value = "";
+        document.getElementById('letterLength').textContent = "0";
     }
+}
+
+function deleteKuhaku() {
+    console.dir("作動");
+    var text = document.getElementById('generatedTextArea').value;
+    text = text.replace(/\s+/g, "");
+    document.getElementById('generatedTextArea').value = text;
+    console.log(text);
+    document.getElementById('generatedTextArea').select();
+    document.execCommand("copy");
+}
+
+// 指定したタグ以外のタグをすべて削除
+function removeTag(str, arrowTag) {
+    // 配列形式の場合は'|'で結合
+    if (
+        Array.isArray ?
+        Array.isArray(arrowTag) :
+        Object.prototype.toString.call(arrowTag) === "[object Array]"
+    ) {
+        arrowTag = arrowTag.join("|");
+    }
+
+    // arrowTag が空の場合は全てのHTMLタグを除去する
+    arrowTag = arrowTag ? arrowTag : "";
+
+    // パターンを動的に生成
+    var pattern = new RegExp(
+        "(?!<\\/?(" +
+        arrowTag +
+        ")(>|\\s[^>]*>))<(\"[^\"]*\"|\\'[^\\']*\\'|[^\\'\">])*>",
+        "gim"
+    );
+
+    return str.replace(pattern, "");
 }

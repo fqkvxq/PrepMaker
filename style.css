@@ -29,6 +29,10 @@ textarea {
     background-color: #f00;
 }
 
+.deleteKuhaku {
+    background-color: #0f0;
+}
+
 .generatedText {
     position: fixed;
     background-color: #c0c0c0;
