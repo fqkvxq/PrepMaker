@@ -1,0 +1,26 @@
+* {
+    font-family: "Sawarabi Mincho";
+}
+
+.navigation {
+    background-color: #000;
+    margin-bottom: 50px;
+}
+
+textarea {
+    width: 100%;
+    font-size: 24px;
+}
+
+.inputBox {
+    margin-bottom: 30px;
+}
+
+.copyButton {
+    background-color: #00f;
+    border-radius: 5px;
+}
+
+.deleteButton {
+    background-color: #f00;
+}

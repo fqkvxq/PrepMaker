@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center text-white">PREPめーかー(ライター用)</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container inputBox">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Point(要点)を記載してください。</h2>
+                <span>一言で、簡潔に記載してください。</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <textarea name="" id="firstPointText" cols="30" rows="2" onclick="this.select()" onInput="inputText()"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="container inputBox">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Reason(理由や要点の詳細)を記載してください。</h2>
+                <span>上に挙げた要点の詳細や、要点の理由について記載してください。</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <textarea name="" id="reasonText" cols="30" rows="5" onclick="this.select()" onInput="inputText()"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="container inputBox">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Example(具体例)を記載してください。</h2>
+                <span>上記記載事項に関する、具体的な事例などを記載してください。</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <textarea name="" id="exampleText" cols="30" rows="5" onclick="this.select()" onInput="inputText()"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="container inputBox">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Point(要点・まとめ)を記載してください。</h2>
+                <span>締めの文章を記載してください。</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <textarea name="" id="secondPointText" cols="30" rows="5" onclick="this.select()" onInput="inputText()"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="container generatedText">
+        <div class="row">
+            <div class="col-md-12">
+                <textarea id="generatedTextArea" name="" id="" cols="30" rows="5" onInput="" readonly></textarea>
+            </div>
+        </div>
+        <div class="row copyButton py-2 my-2" data-clipboard-target="#generatedTextArea">
+            <div class="col-md-12">
+                <h3 class="text-center text-white">コピーする</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container deleteButton py-2 my-2" id="deleteButton" onclick="deleteInputs()">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center text-white">削除する</h3>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
