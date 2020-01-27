@@ -25,7 +25,7 @@ function inputText() {
 }
 
 function deleteInputs() {
-    if (confirm("空白を削除してコピーしますか？")) {
+    if (confirm("削除しますか？")) {
         document.getElementById('headlineText').value = "";
         document.getElementById('firstPointText').value = "";
         document.getElementById('reasonText').value = "";
@@ -37,7 +37,7 @@ function deleteInputs() {
 }
 
 function deleteKuhaku() {
-    if (confirm("削除しますか？")) {
+    if (confirm("空白を削除してコピーしますか？")) {
         console.dir("作動");
         var text = document.getElementById('generatedTextArea').value;
         text = text.replace(/\s+/g, "");
